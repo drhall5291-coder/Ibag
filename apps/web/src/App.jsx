@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import ConnectBank from './ConnectBank';
+import Dashboard from './Dashboard';
 
 const API_BASE = import.meta.env.VITE_API_BASE_URL;
 
@@ -40,8 +41,7 @@ export default function App() {
   }
 
   if (token && connected) {
-    // Step 4 (Dashboard) replaces this placeholder next.
-    return <div style={{ padding: 40 }}>Bank connected. Dashboard goes here next.</div>;
+    return <Dashboard token={token} />;
   }
 
   return (
